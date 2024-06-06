@@ -1,5 +1,4 @@
 import {
-	Image,
 	ImageItem,
 	Item,
 	ProductArea,
@@ -368,7 +367,7 @@ const Designer: FC<{ onCloseClick?: () => void }> = ({ onCloseClick }) => {
 
 	const handleUploadImageClick = async (
 		addItemImage: (guid: any, imageId: number) => Promise<void>,
-		createImage: (file: File, progress?: (percentage: number) => void) => Promise<Image>
+		createImage: (file: File, progress?: (percentage: number) => void) => Promise<any>
 	) => {
 		if (currentTemplate && actualAreaId) {
 			const fileFormats = getSupportedUploadFileFormats(currentTemplate.id, actualAreaId);
